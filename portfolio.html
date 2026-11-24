@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aiman | Portfolio</title>
+
+    <style>
+
+        /* Universal Selector */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Body */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+
+        header {
+            background-color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #536dfe;
+        }
+
+        /* Common Sections */
+
+        section {
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            color: #243b70;
+            margin-bottom: 30px;
+        }
+
+        /* Home Section */
+
+        #home {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaf0ff;
+        }
+
+        #home h3 {
+            font-size: 22px;
+        }
+
+        #home h1 {
+            font-size: 55px;
+            color: #536dfe;
+        }
+
+        #home h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        #home p {
+            max-width: 550px;
+            margin-bottom: 20px;
+        }
+
+        #home img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 20px;
+        }
+
+        /* Button */
+
+        .btn {
+            display: inline-block;
+            background-color: #536dfe;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #243b70;
+        }
+
+        /* About Section */
+
+        #about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Container */
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        /* Cards */
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #536dfe;
+            margin-bottom: 12px;
+        }
+
+        /* Alternate Background */
+
+        #experience,
+        #work {
+            background-color: #eaf0ff;
+        }
+
+        /* Contact Section */
+
+        #contact p {
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #243b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Tablet Responsive */
+
+        @media screen and (max-width: 768px) {
+
+            header {
+                padding: 15px 10px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            #home {
+                min-height: 75vh;
+            }
+
+            #home h1 {
+                font-size: 40px;
+            }
+
+            #home h2 {
+                font-size: 21px;
+            }
+
+            #home img {
+                width: 150px;
+                height: 150px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+        }
+
+        /* Small Mobile Responsive */
+
+        @media screen and (max-width: 480px) {
+
+            nav ul {
+                gap: 9px;
+            }
+
+            nav ul li a {
+                font-size: 12px;
+            }
+
+            #home h1 {
+                font-size: 32px;
+            }
+
+            #home h2 {
+                font-size: 18px;
+            }
+
+            #home h3 {
+                font-size: 18px;
+            }
+
+            #home p {
+                font-size: 14px;
+            }
+
+            #home img {
+                width: 130px;
+                height: 130px;
+            }
+
+            section {
+                padding: 45px 5%;
+            }
+
+            section h2 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Home Section -->
+
+    <section id="home">
+
+        <h3>Hello, I'm</h3>
+
+        <h1>Aiman</h1>
+
+        <h2>learning Web Development</h2>
+
+        <p>
+            I am passionate about creating beautiful
+            and user-friendly websites.
+        </p>
+
+        <img src="https://images.squarespace-cdn.com/content/v1/5695abe17086d7e8c28a3c67/1626799450462-6BBUN92OUN1FLQ39JXLK/lauren-mancke-aOC7TSLb1o8-unsplash.jpg?format=1000w" alt="Aiman Profile Picture">
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <h3>I'm Aiman, learning web development</h3>
+
+        <p>
+            I am learning web development.
+            I enjoy creating websites using HTML and CSS.
+            
+
+    </section>
+
+    <!-- Experience Section -->
+
+    <section id="experience">
+
+        <h2>My Experience</h2>
+
+        <div class="container">
+
+            <div class="card">
+
+                <h3>learning Web Development</h3>
+
+                <p>Currently Learning</p>
+
+                <p>Learning HTML, CSS and Responsive Web Design.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Digital Marketing Learner</h3>
+
+                <p>Currently Learning</p>
+
+                <p>Learning Social Media Marketing, Canva and Branding.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Service Section -->
+
+    <section id="service">
+
+        <h2>My Services</h2>
+
+        <div class="container">
+
+            <div class="card">
+
+                <h3>Web Development</h3>
+
+                <p>Creating simple websites using HTML and CSS.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Website Design</h3>
+
+                <p>Designing clean and user-friendly website layouts.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Social Media Design</h3>
+
+                <p>Creating social media designs using Canva.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+
+    <section id="education">
+
+        <h2>My Education</h2>
+
+        <div class="container">
+
+            <div class="card">
+
+                <h3>FSc</h3>
+
+                <p>Intermediate Education</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Web Development Course</h3>
+
+                <p>Currently Learning HTML and CSS.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Digital Marketing Course</h3>
+
+                <p>Currently Learning Digital Marketing.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Work Section -->
+
+    <section id="work">
+
+        <h2>My Work</h2>
+
+        <div class="container">
+
+            <div class="card">
+
+                <h3>Portfolio Website</h3>
+
+                <p>Personal portfolio website using HTML and CSS.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>E-commerce Website</h3>
+
+                <p>Practice project of an online shopping website.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Social Media Designs</h3>
+
+                <p>Creative designs made using Canva.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Feel free to contact me.</p>
+
+        <p>Email: aiman007009@gamil.com</p>
+
+        <a href="aiman007009@gamil.com" class="btn">
+            Send Email
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>Copyright © 2026 Aiman. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
